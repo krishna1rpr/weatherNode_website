@@ -9,7 +9,7 @@ const forcast = (longitude,latitude,callback) => {
         } else if(response.body.error){
             callback("incorrect location is set",undefined)
         } else{
-            callback(undefined,"It is currently " + response.body.current.temperature + " degrees out. There is a " + response.body.current.feelslike + "% chance of rain.")
+            callback(undefined,"It is currently " + response.body.current.temperature + " degrees out. There is a " + response.body.current.feelslike + "% chance of rain. Current humidity is " + response.body.current.humidity + ".")
         }
     })
 }
